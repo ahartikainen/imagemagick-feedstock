@@ -10,7 +10,6 @@ source:
 
 build:
   number: 0
-  skip: True  # [win]
 
 requirements:
   build:
@@ -36,6 +35,21 @@ requirements:
     - xorg-libxt
     - xz 5.2.*
     - zlib 1.2.11
+    - m2-bash # [win]
+    - m2-autoconf # [win]
+    - m2-autoconf-wrapper # [win]
+    - m2-curl # [win]
+    - m2-findutils # [win]
+    - m2-grep # [win]
+    - m2-libtool # [win]
+    - m2-make # [win]
+    - m2-which # [win]
+    - m2w64-binutils # [win]
+    - m2w64-pcre # [win]
+    - m2w64-gcc # [win]
+    - m2w64-toolchain # [win]
+    - m2w64-tools-git # [win]
+
   run:
     - bzip2 1.0.*
     - fftw
@@ -59,6 +73,7 @@ requirements:
     - xorg-libxt
     - xz 5.2.*
     - zlib 1.2.11
+    - m2w64-gcc-libs # [win]
 
 test:
   commands:
