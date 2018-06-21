@@ -14,6 +14,8 @@ set LDFLAGS="-L$PREFIX/lib $LDFLAGS"
 
 set configure ="./configure --prefix=$PREFIX --build=$GCC_ARCH --host=$GCC_ARCH --target=$GCC_ARCH --enable-hdri=yes --with-quantum-depth=16 --disable-docs --disable-static --disable-openmp --with-bzlib=yes --with-autotrace=no --with-djvu=no --with-dps=no --with-fftw=yes --with-flif=no --with-fpx=no --with-fontconfig=yes --with-freetype=yes --with-gslib=yes --with-gvc=yes --with-jbig=yes --with-jpeg=yes --with-lcms=no --with-lqr=no --with-ltdl=no --with-lzma=yes --with-magick-plus-plus=yes --with-openexr=no --with-openjp2=yes --with-pango=yes --with-perl=yes --with-png=yes --with-raqm=no --with-raw=no --with-rsvg=no --with-tiff=yes --with-webp=yes --with-wmf=no --with-x=yes --with-xml=yes --with-zlib=yes"
 
+bash -lc configure
+
 bash -lc "make -j$CPU_COUNT"
 # FIXME:
 # The failure below seems to be associated with the option --with-gslib,
